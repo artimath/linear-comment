@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "linear-comment.helloWorld",
-        "title": "Hello World"
+        "command": "linear-comment.addComment",
+        "title": "Linear: Add comment to Linear issue"
       }
     ]
   },
@@ -28,7 +28,8 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "dev-install": "vsce package && code --install-extension linear-comment-0.0.1.vsix"
   },
   "devDependencies": {
     "@types/vscode": "^1.78.0",
